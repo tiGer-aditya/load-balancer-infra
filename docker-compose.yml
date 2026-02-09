@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  web1:
+    image: python:3.11-slim
+    container_name: web-server-1
+    command: python -m http.server 8000
+    networks:
+      - app-network
+
+  web2:
+    image: python:3.11-slim
+    container_name: web-server-2
+    command: python -m http.server 8000
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+    name: loadbalancer-net
