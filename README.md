@@ -93,7 +93,7 @@ load-balancer-infra/
 
 ## 📝 Documentation
 - [Day 1: Docker Setup & Networking](docs/day1-setup.md)
-- [Day 2: Flask Web Servers](docs/day2-flask-servers.md)
+- [Day 2: Flask Web Servers](docs/day2-setup.md)
 
 ## 🔗 Connect
 Building this for SysAdmin/Network Admin portfolio.
