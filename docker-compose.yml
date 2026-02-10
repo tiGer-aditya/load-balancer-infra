@@ -2,18 +2,26 @@ version: '3.8'
 
 services:
   web1:
-    image: python:3.11-slim
+    build:
+      context: ./web-servers
+      dockerfile: server-1/Dockerfile
     container_name: web-server-1
-    command: python -m http.server 8000
+    environment:
+      - SERVER_NAME=Web Server 1
     networks:
       - app-network
+    restart: unless-stopped
 
   web2:
-    image: python:3.11-slim
+    build:
+      context: ./web-servers
+      dockerfile: server-2/Dockerfile
     container_name: web-server-2
-    command: python -m http.server 8000
+    environment:
+      - SERVER_NAME=Web Server 2
     networks:
       - app-network
+    restart: unless-stopped
 
 networks:
   app-network:
