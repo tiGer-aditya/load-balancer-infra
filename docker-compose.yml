@@ -1,6 +1,22 @@
 version: '3.8'
 
 services:
+  # Nginx Load Balancer
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx-lb
+    ports:
+      - "8080:80"    # Map port 8080 on Windows to port 80 in container
+    depends_on:
+      - web1
+      - web2
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  # Flask Web Server 1
   web1:
     build:
       context: ./web-servers
@@ -12,6 +28,7 @@ services:
       - app-network
     restart: unless-stopped
 
+  # Flask Web Server 2
   web2:
     build:
       context: ./web-servers

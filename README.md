@@ -22,7 +22,7 @@ Flask Server 1    Flask Server 2
 ## 📊 Progress Tracker
 - [x] **Day 1**: Docker setup & networking ✅
 - [x] **Day 2**: Flask web servers with health checks ✅
-- [ ] **Day 3**: Nginx load balancer configuration
+- [x] **Day 3**: Nginx load balancer configuration
 - [ ] **Day 4**: Python monitoring dashboard
 - [ ] **Day 5**: Automation scripts & logging
 - [ ] **Day 6**: Testing & optimization
@@ -94,6 +94,7 @@ load-balancer-infra/
 ## 📝 Documentation
 - [Day 1: Docker Setup & Networking](docs/day1-setup.md)
 - [Day 2: Flask Web Servers](docs/day2-setup.md)
+- [Day 3: Nginx Testing configuration](docs/day3-nginx-loadbalancer.md)
 
 ## 🔗 Connect
 Building this for SysAdmin/Network Admin portfolio.
